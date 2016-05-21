@@ -2,7 +2,6 @@ Options +FollowSymlinks
 RewriteEngine On
 RewriteCond %{SERVER_PORT} 80
 
-RewriteRule ^(.*)$ https://www.apple.clone/$1 [L,R=301]
 
 #---------------------------
 <ifModule mod_expires.c>
