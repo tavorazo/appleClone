@@ -1,0 +1,290 @@
+</html>
+
+
+<!DOCTYPE html>
+<html ng-app="apple">
+
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+    
+
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="bower_components/angular-material/angular-material.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="bower_components/slicknav/slicknav.css">
+    
+    <link href="assets/css/apple.css" rel="stylesheet">
+
+
+</head>
+	<body ng-controller="webController"> 
+ 
+		<!-- /header -->
+	 	<header>
+	 		<menu class="nav nav-tabs" id="menu">
+			  	<li role="presentation"><a href="#" class="big">  </a></li>
+				<li role="presentation" ng-show="m">
+					<a href="http://www.apple.com/mac/">Mac</a>
+				</li>
+				<li role="presentation" ng-show="m">
+					<a href="http://www.apple.com/ipad/">iPad</a>
+				</li>
+				<li role="presentation" ng-show="m">
+					<a href="http://www.apple.com/iphone/">iPhone</a>
+				</li>
+				<li role="presentation" ng-show="m">
+					<a href="http://www.apple.com/watch/">Watch</a>
+				</li>
+				<li role="presentation" ng-show="m">
+					<a href="http://www.apple.com/tv/">TV</a>
+				</li>
+				<li role="presentation" ng-show="m">
+					<a href="http://www.apple.com/music/">Music</a>
+				</li>
+				<li role="presentation" ng-show="m">
+					<a href="https://support.apple.com/">Support</a>
+				</li>
+			    <li role="presentation" ng-click="m = !m">
+			    	<a href="#" > 
+			    		<span class="glyphicon glyphicon-search" aria-hidden="true"></span> 
+			    	</a>
+			    </li>
+			    <li ng-show="!m" class="search">
+			    	<input type="text" class="form-control" placeholder="Search apple.com" ng-model="searchInput"> 
+			    	<div class="dropdown-menu-search">
+			    		<ul>
+			    			<li ng-repeat="word in words | filter:searchInput" > {{word.name }}</li>
+			    		</ul>
+			    	</div>	
+			    </li>
+			    <li ng-show="!m" role="presentation"><a href="#" >  <span class="glyphicon glyphicon-remove" aria-hidden="true" ng-click="m = !m"></span>  </a></li>
+			  	<!-- bag drobdown -->
+			</menu>
+			<li  ng-show="m" class="bag btn-group">
+				<a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<span class="glyphicon glyphicon-tag text-white" aria-hidden="true"></span>
+				</a>
+				<ul class="dropdown-menu">
+				  	<li class="text-center padding-30-x"><small>Your Bag is empy </small></li>
+				    <li role="separator" class="divider"></li>
+				    <li><a href="#"> <span class="glyphicon glyphicon-shopping-cart tab" aria-hidden="true"></span> Bag</a></li>
+				    <li role="separator" class="divider"></li>
+				    <li><a href="#"> <span class="glyphicon glyphicon-heart tab" aria-hidden="true"></span> Favorites</a></li>
+				    <li role="separator" class="divider"></li>
+				    <li><a href="#"> <span class="glyphicon glyphicon-hdd  tab" aria-hidden="true"></span> Orders</a></li>
+				    <li role="separator" class="divider"></li>
+				    <li><a href="#"> <span class="glyphicon glyphicon-cog tab" aria-hidden="true"></span> Account</a></li>
+				    <li role="separator" class="divider"></li>
+				    <li><a href="#"> <span class="glyphicon glyphicon-user tab" aria-hidden="true"></span> Sing Out</a></li>
+				</ul>
+			</li>
+	 	</header>
+
+		<main  class="container-fluid">
+
+			<section id="carousel" >
+				<slick dots=true infinite=true speed=1000 slides-to-show=1 touch-move=false slides-to-scroll=1 autoplay=true>
+			  		<div class="padding-60" id="banner1">
+			  			<h2><img src="http://images.apple.com/v/home/cn/images/logos/iphone_6s_medium.png" alt=""></h2>
+			  			<h3>3D Touch. 12MP photos. 4K video. One powerful phone.</h3>
+			  		</div>
+			  		<div class="" id="banner2">
+			  			<h2><img src="http://images.apple.com/v/home/cn/images/logos/ipad_pro_medium.png" alt=""></h2>
+			  			<h3>Super. Computer. Now in two sizes.</h3>
+			  		</div>
+			  		<div class="padding-60" id="banner3">
+			  			<h2><img src="http://images.apple.com/v/home/cn/images/logos/watch_large.png" alt=""></h2>
+			  			<h3>You. At a glance.</h3>
+			  		</div>
+				</slick>
+			</section>	
+			
+			<section class="promos">
+			  <div class="row">
+			    <a href="http://www.apple.com/iphone-se/" title="">
+			    	<div class="col-sm-3 promo" id="promo1"></div>
+			    </a>
+			    <a href="http://www.apple.com/macbook/" title="">
+			    	<div class="col-sm-3 promo" id="promo2"></div>
+			    </a>
+			    <a href="http://www.apple.com/tv/" title="">
+			    	<div class="col-sm-3 promo" id="promo3"></div>
+			    </a>
+			    <a href="http://www.apple.com/shop/accessories/all-accessories" title="">
+			    	<div class="col-sm-3 promo" id="promo4"></div>
+			    </a>
+			  </div>
+			</section> 
+
+			<section class="redcross-banner-wrapper container">
+				<div class="redcross-banner">
+					<figure id="logo" style="background-image:url('http://images.apple.com/v/home/cn/images/misc/redcross_banner_large_2x.jpg'); "></figure>
+					<span class="redcross-copy">
+						Canada Wildfires Relief 
+						<a href="" title="">
+							Donate to help >
+						</a>
+					</span>
+				</div>
+			</section>
+
+		</main>
+
+		<footer>
+				<div class="col">
+					<h3  ng-click="toggle1.show = !toggle1.show ">
+						Shop and Learn
+						<span class="glyphicon glyphicon-plus more"></span>
+					</h3>
+					<ul class="footer-toggl" ng-class="toggle1">
+						<li>Mac</li>
+						<li>iPad</li>
+						<li>iPhone</li>
+						<li>Watch</li>
+						<li>TV</li>
+						<li>Music</li>
+						<li>iTunes</li>
+						<li>iPod</li>
+						<li>Accessories</li>
+						<li>Gift Cards</li>
+					</ul>
+				</div>
+				<div class="col">
+					<h3 ng-click="toggle2.show = !toggle2.show ">
+						Apple Store
+						<span class="glyphicon glyphicon-plus more"></span>
+					</h3>
+					<ul class="footer-toggl" ng-class="toggle2">
+						<li>Find a Store</li>
+						<li>Genius Bar</li>
+						<li>Workshops and Learning</li>
+						<li>Youth Programs</li>
+						<li>Apple Store App</li>
+						<li>Refurbished</li>
+						<li>Financing</li>
+						<li>Reuse and Recycling</li>
+						<li>Order Status</li>
+						<li>Shopping Help</li>
+					</ul>
+				</div>
+				<div class="col">
+					<h3 ng-click="toggle3.show = !toggle3.show ">
+						For Education
+						<span class="glyphicon glyphicon-plus more"></span>
+					</h3>
+					<ul class="footer-toggl" ng-class="toggle3">
+						<li>Apple and Education</li>
+						<li>Shop for College</li>
+					</ul>
+					<h3 ng-click="toggle4.show = !toggle4.show ">
+						For Business
+						<span class="glyphicon glyphicon-plus more"></span>
+					</h3>
+					<ul class="footer-toggl" ng-class="toggle4">
+						<li>Apple and Business</li>	
+						<li>Shop for Business</li>	
+					</ul>
+				</div>
+				<div class="col">
+					<h3 ng-click="toggle5.show = !toggle5.show ">
+						Account
+						<span class="glyphicon glyphicon-plus more"></span>
+					</h3>
+					<ul class="footer-toggl" ng-class="toggle5">
+						<li>Manage Your Apple ID</li>
+						<li>Apple Store Account</li>
+						<li>iCloud.com</li>
+					</ul>
+					<h3 ng-click="toggle6.show = !toggle6.show ">
+						Apple Values
+						<span class="glyphicon glyphicon-plus more"></span>
+					</h3>
+					<ul class="footer-toggl" ng-class="toggle6">
+						<li>Environment</li>
+						<li>Supplier Responsibility</li>
+						<li>Accessibility</li>
+						<li>Privacy</li>
+						<li>Inclusion and Diversity</li>
+						<li>Education</li>
+					</ul>
+				</div>
+				<div class="col">
+					<h3 ng-click="toggle7.show = !toggle7.show ">
+						About Apple
+						<span class="glyphicon glyphicon-plus more"></span>
+					</h3>
+					<ul class="footer-toggl" ng-class="toggle7">
+						<li>Apple Info</li>
+						<li>Job Opportunities</li>
+						<li>Press Info</li>
+						<li>Investors</li>
+						<li>Events</li>
+						<li>Hot News</li>
+						<li>Contact Apple</li>
+					</ul>
+				</div>
+
+				<div class="col-sm-12 text-gray" style="padding-bottom: 10px ">
+					More ways to shop: Visit an <a href="#" title="">Apple Store</a>, call 1-800-MY-APPLE, or <a href="htp://locate.apple.com" title="">find a reseller</a>.
+				</div>
+				
+				<div class="col-sm-4 text-gray border-top" >	
+					Copyright © 2016 Apple Inc. 
+					All rights reserved.
+				</div>
+				<div class="col-sm-7 text-gray legal" >
+					<span>Privacy Policy </span>
+					<span class="border-left">Terms of Use </span>
+					<span class="border-left">Sales and Refunds </span>
+					<span class="border-left">Legal </span>
+					<span class="border-left">Site Map</span>
+				</div>
+				<div class="col-sm-2 text-gray flag">
+					<img src=http://images.apple.com/ac/flags/1/images/us/16.png alt="">
+					United States
+				</div>	
+		</footer>
+
+
+
+
+	<script src="bower_components/angular/angular.js"></script> 
+	<script src="bower_components/angular-aria/angular-aria.js"></script> 
+	<script src="bower_components/angular-animate/angular-animate.js"></script> 
+	<script src="bower_components/angular-material/angular-material.js"></script> 
+
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
+	<link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
+	
+	<!-- angular slick carousel -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="bower_components/slick-carousel/slick/slick.js"></script>
+	<script src="bower_components/slick-carousel/slick/slick.min.js"></script>
+	<script src="bower_components/angular-slick/dist/slick.js"></script>
+	<script src="bower_components/angular-slick/dist/slick.min.js"></script>
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+	<!-- menu -->
+	<script src="bower_components/slicknav/jquery.slicknav.min.js"></script>
+	<script>
+		$(function(){
+			$('#menu').slicknav();
+		});
+	</script>
+
+	<script src="assets/js/controller.js"></script> 
+
+
+</body>
+</html>
+
+
+
+
+
