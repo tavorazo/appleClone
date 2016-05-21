@@ -1,5 +1,5 @@
 angular
-    .module('apple', ["slick"])
+    .module('apple', ["slick", "ngAnimate"])
     .controller('webController', WebController)
 
 

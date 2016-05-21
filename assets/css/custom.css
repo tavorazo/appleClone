@@ -147,7 +147,7 @@ footer .flag { position: absolute; bottom:30px; right:25px; padding-left: 40px; 
 	footer .more { display:none; }
 }
 
-@media (min-width: 992px){
+@media (min-width: 1068px){
 
 	.col-sm-3{width: 25%;}
 
