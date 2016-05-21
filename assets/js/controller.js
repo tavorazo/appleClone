@@ -1,5 +1,5 @@
 angular
-    .module('apple', ["slick", "ngTouch"])
+    .module('apple', ["slick"])
     .controller('webController', WebController)
 
 
