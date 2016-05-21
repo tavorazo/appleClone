@@ -1,6 +1,8 @@
 Options +FollowSymlinks
 RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
 
+RewriteRule ^(.*)$ http://appleclone.herokuapp.com/$1 [L,R=301]
 
 #---------------------------
 <ifModule mod_expires.c>
